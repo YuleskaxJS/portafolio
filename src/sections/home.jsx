@@ -15,7 +15,8 @@ const Tag = ({ children, delay = 0 }) => {
 };
 
 export default function Home(){
-  const tags = ["React", "JavaScript", "QA", "SQL", "MongoDB"];
+  const tags = ["React", "JavaScript", "QA", "SQL", "MongoDB", "GitHub", "Postman"];
+
 
   return (
     <section id="home" className="container-wide hero">
