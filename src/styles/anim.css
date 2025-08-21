@@ -1,0 +1,39 @@
+/* Respeta el sistema: si el usuario prefiere menos movimiento, desactiva */
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Base: elemento oculto antes de entrar al viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+
+/* Cuando entra al viewport */
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Variantes rápidas */
+.fade-in   { transform: none; }
+.fade-up   { transform: translateY(16px); }
+.fade-down { transform: translateY(-16px); }
+.slide-left  { transform: translateX(24px); }
+.slide-right { transform: translateX(-24px); }
+.zoom-in   { transform: scale(.96); }
+
+/* Avatar con flotación sutil (opcional) */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}

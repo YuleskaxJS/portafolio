@@ -1,0 +1,84 @@
+html { scroll-behavior: smooth; }
+
+.nav-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+
+/* más alto y con separación amplia entre brand y links */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  column-gap: 40px;          /* aire extra entre bloques */
+}
+
+/* marca bien separada del primer link */
+.brand{
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text);
+  margin-right: 32px;        /* empuja aún más los links */
+}
+
+.links{
+  display: none;
+  margin-left: auto;         /* manda los links a la derecha */
+  gap: 36px;                 /* más espacio entre links */
+}
+
+.links a{
+  color: var(--text);
+  opacity: 0.9;
+  padding: 8px 4px;          /* área de click más grande */
+  border-bottom: 2px solid transparent;
+  transition: color .2s ease, opacity .2s ease, border-color .2s ease;
+}
+.links a:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.menu-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* menú móvil */
+.drawer{
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 10px;
+  padding: 14px 24px 20px;
+}
+.drawer a{
+  padding: 12px 0;
+  color: var(--text);
+  border-bottom: 1px dashed var(--border);
+}
+.drawer a:last-child{ border-bottom: none; }
+.drawer a:hover{ color: var(--accent); }
+
+/* escritorio */
+@media (min-width: 768px){
+  .menu-btn{ display: none; }
+  .links{ display: flex; }
+  .drawer{ display: none; }
+}

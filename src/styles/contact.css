@@ -1,0 +1,53 @@
+.contact-wrap { padding-top: 56px; }
+.contact-lead { color: var(--muted); margin-top: 8px; margin-bottom: 20px; }
+
+/* lista vertical minimal */
+.contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+
+/* fila */
+.contact-row{
+  display: grid;
+  grid-template-columns: 40px 1fr 20px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  border-left: 3px solid var(--border);
+  border-right: 1px solid transparent;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color .2s ease, background .2s ease, transform .12s ease, box-shadow .2s ease;
+}
+.contact-row:hover{
+  border-left-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(210,145,255,.12);
+  transform: translateY(-1px);
+}
+
+/* icono minimal */
+.c-icon{
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* textos */
+.c-body{ display: grid; gap: 2px; }
+.c-title{ font-weight: 600; }
+.c-sub{ color: var(--muted); font-size: .95rem; }
+
+/* flecha */
+.c-arrow{ color: var(--muted); justify-self: end; }
+
+/* responsive: compacta */
+@media (max-width: 640px){
+  .contact-row{ grid-template-columns: 36px 1fr 16px; padding: 12px 14px; }
+  .c-icon{ width: 36px; height: 36px; }
+}
