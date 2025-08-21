@@ -40,7 +40,8 @@ export default function Home(){
           <div className="cta">
             <a href="#projects" className="btn btn-primary">Ver proyectos</a>
             <a href="#contact" className="btn btn-ghost">Contáctame</a>
-            <a href="/CV_Yuleska.pdf" className="btn btn-ghost" download>Descargar CV</a>
+            {/* Si subes tu CV a /public/CV_Yuleska.pdf, descomenta: */}
+            <a href="/CVYuleska.pdf" className="btn btn-ghost" download>Descargar CV</a>
           </div>
 
           {/* Tags con animación */}
