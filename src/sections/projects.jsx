@@ -14,59 +14,24 @@ export default function Projects() {
   return (
     <section id="projects" className="container">
       <h2>Proyectos</h2>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 20, marginTop: 16 }}>
+      <div className="projects-grid">
         {myProjects.map((project, idx) => (
-          <div
-            key={idx}
-            style={{
-              border: "1px solid #ccc",
-              borderRadius: 8,
-              padding: 16,
-              width: 300,
-              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-            }}
-          >
+          <div key={idx} className="project-card reveal">
             {project.image && (
               <img
                 src={project.image}
                 alt={project.title}
-                style={{ width: "100%", borderRadius: 6 }}
+                className="project-image"
               />
             )}
-            <h3 style={{ marginTop: 12 }}>{project.title}</h3>
-            <p style={{ fontSize: 14, color: "var(--muted)" }}>{project.description}</p>
-            <p style={{ fontSize: 12, color: "#555" }}>Tecnologías: {project.tech}</p>
-            <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  flex: 1,
-                  textAlign: "center",
-                  padding: "8px 0",
-                  backgroundColor: "#2563eb",
-                  color: "#fff",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                }}
-              >
+            <h3>{project.title}</h3>
+            <p className="project-desc">{project.description}</p>
+            <p className="project-tech">Tecnologías: {project.tech}</p>
+            <div className="project-links">
+              <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn-live">
                 Ver en Vivo
               </a>
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  flex: 1,
-                  textAlign: "center",
-                  padding: "8px 0",
-                  backgroundColor: "#6b7280",
-                  color: "#fff",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                }}
-              >
+              <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn-repo">
                 Ver Código
               </a>
             </div>
