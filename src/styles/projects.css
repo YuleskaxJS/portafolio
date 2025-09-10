@@ -1,0 +1,65 @@
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.project-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  background: rgba(210, 145, 255, 0.05);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-live, .btn-repo {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-live:hover {
+  background-color: #1e40af;
+}
+
+.btn-repo:hover {
+  background-color: #4b5563;
+}
