@@ -83,30 +83,6 @@ export default function Projects() {
               >
                 Ver en Vivo
               </a>
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  flex: 1,
-                  textAlign: "center",
-                  padding: "10px 0",
-                  borderRadius: 12,
-                  backgroundColor: "rgba(255,255,255,0.3)",
-                  color: "#fff",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                  transition: "all 0.3s",
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.5)";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.3)";
-                }}
-              >
-                Ver Código
-              </a>
             </div>
           </div>
         ))}

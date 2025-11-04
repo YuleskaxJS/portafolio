@@ -29,11 +29,11 @@ export default function Home(){
           </h1>
 
           <p className='subtext'>
-            Desarrolladora full stack en crecimiento 🚀, enfocada en React y automatización de pruebas
+            Desarrolladora full stack en crecimiento 🚀, enfocada en React y las bases de datos
           </p>
 
           <p className="subtitle">
-            Frontend con React/JS · Backend con SQL/MongoDB · QA Automation · 
+            Frontend con React/JavaScript · Backend con SQL/MongoDB · 
             Google Apps Script · Microsoft 365
           </p>
 
